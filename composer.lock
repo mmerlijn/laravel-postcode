@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mmerlijn/laravel-helpers.git",
-                "reference": "8e6274ff3f255cd92fdcc054c7848f7714d3ddf0"
+                "reference": "38c7305640f2ef0ee41b8cf7cee9563562d2a0c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mmerlijn/laravel-helpers/zipball/8e6274ff3f255cd92fdcc054c7848f7714d3ddf0",
-                "reference": "8e6274ff3f255cd92fdcc054c7848f7714d3ddf0",
+                "url": "https://api.github.com/repos/mmerlijn/laravel-helpers/zipball/38c7305640f2ef0ee41b8cf7cee9563562d2a0c4",
+                "reference": "38c7305640f2ef0ee41b8cf7cee9563562d2a0c4",
                 "shasum": ""
             },
             "require": {
@@ -57,7 +57,7 @@
                 "issues": "https://github.com/mmerlijn/laravel-helpers/issues",
                 "source": "https://github.com/mmerlijn/laravel-helpers/tree/master"
             },
-            "time": "2022-01-09T16:40:21+00:00"
+            "time": "2022-01-10T10:19:36+00:00"
         }
     ],
     "packages-dev": [
@@ -749,12 +749,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "13e5fbf4c2a2effb28d18686efd2d49c21b56e50"
+                "reference": "0b187784a1f0c79a0b793fc9925c42749913bc56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/13e5fbf4c2a2effb28d18686efd2d49c21b56e50",
-                "reference": "13e5fbf4c2a2effb28d18686efd2d49c21b56e50",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/0b187784a1f0c79a0b793fc9925c42749913bc56",
+                "reference": "0b187784a1f0c79a0b793fc9925c42749913bc56",
                 "shasum": ""
             },
             "require": {
@@ -765,7 +765,7 @@
                 "ext-openssl": "*",
                 "laravel/serializable-closure": "^1.0",
                 "league/commonmark": "^2.0.2",
-                "league/flysystem": "^2.0",
+                "league/flysystem": "^2.3.1",
                 "monolog/monolog": "^2.0",
                 "nesbot/carbon": "^2.53.1",
                 "php": "^8.0.2",
@@ -784,7 +784,7 @@
                 "symfony/routing": "^6.0",
                 "symfony/var-dumper": "^6.0",
                 "tijsverkoyen/css-to-inline-styles": "^2.2.2",
-                "vlucas/phpdotenv": "^5.3",
+                "vlucas/phpdotenv": "^5.4.1",
                 "voku/portable-ascii": "^1.4.8"
             },
             "conflict": {
@@ -845,6 +845,7 @@
                 "symfony/cache": "^6.0"
             },
             "suggest": {
+                "ably/ably-php": "Required to use the Ably broadcast driver (^1.0).",
                 "aws/aws-sdk-php": "Required to use the SQS queue driver and DynamoDb failed job storage (^3.198.1).",
                 "brianium/paratest": "Required to run tests in parallel (^6.0).",
                 "doctrine/dbal": "Required to rename columns and drop SQLite columns (^2.13.3|^3.1.4).",
@@ -919,7 +920,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-01-07T21:26:42+00:00"
+            "time": "2022-01-10T17:34:58+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -1706,12 +1707,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "306245c9852bed5a84952fdcdb85acbafe520e17"
+                "reference": "e86fe5f00e31199f50cf1630f900d6772d3888db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/306245c9852bed5a84952fdcdb85acbafe520e17",
-                "reference": "306245c9852bed5a84952fdcdb85acbafe520e17",
+                "url": "https://api.github.com/repos/nette/utils/zipball/e86fe5f00e31199f50cf1630f900d6772d3888db",
+                "reference": "e86fe5f00e31199f50cf1630f900d6772d3888db",
                 "shasum": ""
             },
             "require": {
@@ -1784,7 +1785,7 @@
                 "issues": "https://github.com/nette/utils/issues",
                 "source": "https://github.com/nette/utils/tree/master"
             },
-            "time": "2022-01-09T12:10:33+00:00"
+            "time": "2022-01-10T17:25:07+00:00"
         },
         {
             "name": "nikic/php-parser",

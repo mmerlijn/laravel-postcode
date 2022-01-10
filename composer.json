@@ -16,14 +16,14 @@
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "mmerlijn\\laravelPostcode\\": "src/"
+      "mmerlijn\\laravelPostcode\\": "src/",
+      "mmerlijn\\laravelPostcode\\Database\\Seeders\\": "database/seeders/",
+      "mmerlijn\\laravelPostcode\\Database\\Factories\\": "database/factories/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "mmerlijn\\laravelPostcode\\tests\\": "tests/",
-      "mmerlijn\\laravelPostcode\\Database\\Seeders\\": "database/seeders/",
-      "mmerlijn\\laravelPostcode\\Database\\Factories\\": "database/factories/"
+      "mmerlijn\\laravelPostcode\\tests\\": "tests/"
     }
   },
   "require-dev": {
