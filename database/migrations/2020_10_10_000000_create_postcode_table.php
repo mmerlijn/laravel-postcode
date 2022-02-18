@@ -39,13 +39,14 @@ return new class extends Migration {
             });
         }
         if (config('postcode.postcode_table_not_found')) {
-            Schema::connection(config('postcode.database_connection_name'))->create(config('postcode.postcode_table_not_found'), function (Blueprint $table) {
-                $table->increments('id');
-                $table->string('postcode', 10);
-                $table->string('number', 20)->nullable();
-                $table->timestamps();
-            });
-
+            if (!Schema::connection(config('postcode.database_connection_name'))->hasTable(config('postcode.postcode_table_not_found'))) {
+                Schema::connection(config('postcode.database_connection_name'))->create(config('postcode.postcode_table_not_found'), function (Blueprint $table) {
+                    $table->increments('id');
+                    $table->string('postcode', 10);
+                    $table->string('number', 20)->nullable();
+                    $table->timestamps();
+                });
+            }
         }
     }
 
