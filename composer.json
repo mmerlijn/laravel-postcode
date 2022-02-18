@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": "^8.0",
-    "mmerlijn/laravel-helpers": "dev-master"
+    "mmerlijn/laravel-helpers": "^1.11"
   },
   "minimum-stability": "dev",
   "autoload": {

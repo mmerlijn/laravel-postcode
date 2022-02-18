@@ -4,7 +4,6 @@ namespace mmerlijn\laravelPostcode\tests\Unit;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use mmerlijn\laravelPostcode\Models\Postcode;
-use mmerlijn\laravelPostcode\Models\PostcodeNotFound;
 use mmerlijn\laravelPostcode\tests\TestCase;
 
 class DatabaseTest extends TestCase
