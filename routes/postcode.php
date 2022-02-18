@@ -5,6 +5,3 @@ use mmerlijn\laravelPostcode\Http\Controllers\PostcodeController;
 
 Route::post('/', [PostcodeController::class, 'getAddress'])
     ->name('postcode.getAddress');
-
-//Route::post('/', fn() => "hallo")
-//    ->name('postcode.getAddress');

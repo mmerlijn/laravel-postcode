@@ -18,7 +18,7 @@ postcode_table_name => default: postcode_nl
 postcode_table_not_found =>default: postcode_not_found
 
 route.prefix    => default: postcode
-route.middleware => defailt: ['web']
+route.middleware => default: ['web']
 ```
 
 ### Usage
