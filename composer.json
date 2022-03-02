@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": "^8.0",
-    "mmerlijn/laravel-helpers": "^1.11"
+    "mmerlijn/laravel-helpers": "^1.*"
   },
   "minimum-stability": "dev",
   "autoload": {
@@ -36,6 +36,9 @@
       "providers": [
         "mmerlijn\\laravelPostcode\\LaravelPostcodeServiceProvider"
       ]
+    },
+    "branch-alias": {
+      "dev-master": "1.x-dev"
     }
   },
   "scripts": {
