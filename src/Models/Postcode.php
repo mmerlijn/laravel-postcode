@@ -7,6 +7,23 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use mmerlijn\laravelHelpers\Facades\Distance;
 
+/**
+ * @property string $postcode
+ * @property int $pnum
+ * @property string $pchar
+ * @property int $minnumber
+ * @property int $maxnumber
+ * @property string $numbertype
+ * @property string $street
+ * @property string $city
+ * @property string $municipality
+ * @property string $province
+ * @property string $province_code
+ * @property float $lat
+ * @property float $lon
+ * @property float $rd_x
+ * @property float $rd_y
+ */
 class Postcode extends Model
 {
     protected $guarded = [];
@@ -42,6 +59,31 @@ class Postcode extends Model
                     $q->where('numbertype', '=', 'even')->orWhere('numbertype', '=', 'mixed');
                 });
         }
+    }
+
+    public static function getPostcode(string $city, string $street, string $building): string
+    {
+        $building_nr = (new Postcode)->getBuildingNr($building);
+        foreach (Postcode::whereCity($city)->whereStreet($street)->get() as $postcode) {
+            switch ($postcode->numbertype) {
+                case "mixed":
+                    if ($postcode->minnumber <= $building_nr and $postcode->maxnumber >= $building_nr) {
+                        return $postcode->postcode;
+                    }
+                    break;
+                case "even":
+                    if ($postcode->minnumber <= $building_nr and $postcode->maxnumber >= $building_nr and $building_nr % 2 == 0) {
+                        return $postcode->postcode;
+                    }
+                    break;
+                case "odd":
+                    if ($postcode->minnumber <= $building_nr and $postcode->maxnumber >= $building_nr and $building_nr % 2 == 1) {
+                        return $postcode->postcode;
+                    }
+                    break;
+            }
+        }
+        return "";
     }
 
     public static function getCity(string $postcode): string

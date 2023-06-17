@@ -25,5 +25,12 @@ class DatabaseTest extends TestCase
         $this->assertEquals(0, Postcode::getAddress('1187KA', 23)->count());
         $this->assertEquals(1, Postcode::getAddress('1187LS', 1)->count()); //odd between 1-7
         $this->assertEquals(0, Postcode::getAddress('1187LS', 8)->count()); //
+
+        $this->assertEquals('1187KA', Postcode::getPostcode('Amstelveen', 'Gaasterland', '18a'));
+        $this->assertEquals('1187LS', Postcode::getPostcode('Amstelveen', 'Westwijkplein', '5'));
+        $this->assertEquals('', Postcode::getPostcode('Amstelveen', 'Duivenvoorde', '75')); //postcode not present in DB (out of range)
+        $this->assertEquals('', Postcode::getPostcode('Amstelveen', 'Westwijkplein', '6')); //postcode not present in DB (must be odd)
+
+
     }
 }
