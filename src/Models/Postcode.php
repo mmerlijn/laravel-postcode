@@ -64,7 +64,7 @@ class Postcode extends Model
     public static function getPostcode(string $city, string $street, string $building): string
     {
         $building_nr = (new Postcode)->getBuildingNr($building);
-        foreach (Postcode::whereCity($city)->whereStreet($street)->get() as $postcode) {
+        foreach (Postcode::where('city', 'like', $city . "%")->whereStreet($street)->get() as $postcode) {
             switch ($postcode->numbertype) {
                 case "mixed":
                     if ($postcode->minnumber <= $building_nr and $postcode->maxnumber >= $building_nr) {
