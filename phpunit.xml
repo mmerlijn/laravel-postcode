@@ -11,13 +11,12 @@
         convertWarningsToExceptions="true"
         processIsolation="false"
         stopOnFailure="false"
-        xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd"
 >
-    <coverage>
+    <source>
         <include>
-            <directory suffix=".php">src/</directory>
+            <directory suffix=".php">./src</directory>
         </include>
-    </coverage>
+    </source>
     <testsuites>
         <testsuite name="Unit">
             <directory suffix="Test.php">./tests/Unit</directory>
