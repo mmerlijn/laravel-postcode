@@ -11,9 +11,9 @@
   ],
   "require": {
     "php": "^8.2",
-    "mmerlijn/laravel-helpers": "~2.0"
+    "mmerlijn/laravel-helpers": "^3.0"
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
       "mmerlijn\\laravelPostcode\\": "src/",
@@ -27,9 +27,9 @@
     }
   },
   "require-dev": {
-    "phpunit/phpunit": "^11.0.1",
-    "orchestra/testbench": "9.x-dev",
-    "laravel/framework": "^11.x-dev"
+    "pestphp/pest": "4.x-dev",
+    "orchestra/testbench": "10.x-dev",
+    "laravel/framework": "^12.x-dev"
   },
   "extra": {
     "laravel": {
@@ -38,7 +38,7 @@
       ]
     },
     "branch-alias": {
-      "dev-master": "2.x-dev"
+      "dev-master": "3.x-dev"
     }
   },
   "scripts": {
@@ -46,6 +46,9 @@
     "test-f": "vendor/bin/phpunit --filter"
   },
   "config": {
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
   }
 }
